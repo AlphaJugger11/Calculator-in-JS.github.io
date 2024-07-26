@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: darkcyan;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    background-color: burlywood;
+    width: 450px;
+    height: 700px;
+    text-align: center;
+}
+
+.buttons-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjusted to 4 columns to accommodate CE and zero */
+    /* grid-template-rows: auto; */
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-color: black;
+    grid-template-areas: 
+        "ce ce del eql "
+        "one two three div"
+        "four five six mul"
+        "seven eight nine sub"
+        "zero zero zero add";
+    padding: auto;
+    
+    margin: 0px;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px;
+    height: 100px;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust width of specific buttons */
+.btnCE {
+    grid-area: ce;
+    width: 212px;
+}
+
+.btn0 {
+    grid-area: zero;
+    width: 325px;
+}
+
+/* Grid areas for other buttons */
+.btnbcksp { grid-area: del; }
+.btneql { grid-area: eql; }
+.btn1 { grid-area: one; }
+.btn2 { grid-area: two; }
+.btn3 { grid-area: three; }
+.btnDiv { grid-area: div; }
+.btn4 { grid-area: four; }
+.btn5 { grid-area: five; }
+.btn6 { grid-area: six; }
+.btnMul { grid-area: mul; }
+.btn7 { grid-area: seven; }
+.btn8 { grid-area: eight; }
+.btn9 { grid-area: nine; }
+.btnSub { grid-area: sub; }
+.btnAdd { grid-area: add; }
+button{
+    background-color: blanchedalmond;
+    border-color: blanchedalmond;
+    /* box-shadow: none; */
+}
+button:hover{
+    background-color: rgb(255, 225, 181);
+}
+.results-screen {
+    max-width: 410px;
+    width: 430px;
+    background-color: black;
+    color: white;
+    justify-content: baseline;
+    height: 150px;
+    max-height: 145px;
+    margin: auto;
+    text-align: right;
+    align-items: end;
+    font-size: 70px;
+    /* font-style: italic; */
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    white-space: nowrap;
+}
